@@ -10,10 +10,11 @@ import UIKit
 
 @IBDesignable
 class TestView: UIView {
-    
+
     // Views
     private let containerView = UIView()
     private let redSquare = UIView()
+    private let redSquareSize = CGSize(width: 100, height: 100)
     private let topLabel = UILabel()
     
     private let frameLabel = UILabel()
@@ -22,12 +23,12 @@ class TestView: UIView {
     
     override func layoutSubviews() {
         containerView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.width)
-        redSquare.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        redSquare.frame = CGRect(origin: CGPoint.zero, size: redSquareSize)
         topLabel.frame = CGRect(x:0, y: 0, width: 100, height: 20)
         
         
         // Play with redSquare's frame
-        
+
         
         
         // Play with redSquare's transform
@@ -44,9 +45,9 @@ class TestView: UIView {
         
         
         frameLabel.frame = CGRect(x: 0, y: frame.width, width: frame.width, height: 50)
-        frameLabel.text = "Red Square Frame: \(redSquare.frame)"
+        frameLabel.text = "  redSquare's Frame: \(redSquare.frame)"
         boundsLabel.frame = CGRect(x: 0, y: frame.width + 50, width: frame.width, height: 50)
-        boundsLabel.text = "Red Square Bounds: \(redSquare.bounds)"
+        boundsLabel.text = "  redSquare's Bounds: \(redSquare.bounds)"
     }
     
     
