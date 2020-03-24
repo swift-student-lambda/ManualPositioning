@@ -37,6 +37,12 @@ class TestView: UIView {
         // Play with redSquare's bounds
         
         
+        
+        // Play with containerView's color
+        
+        
+        
+        
         frameLabel.frame = CGRect(x: 0, y: frame.width, width: frame.width, height: 50)
         frameLabel.text = "Red Square Frame: \(redSquare.frame)"
         boundsLabel.frame = CGRect(x: 0, y: frame.width + 50, width: frame.width, height: 50)
