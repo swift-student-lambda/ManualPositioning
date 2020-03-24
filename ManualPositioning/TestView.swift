@@ -25,29 +25,41 @@ class TestView: UIView {
         containerView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.width)
         redSquare.frame = CGRect(origin: CGPoint.zero, size: redSquareSize)
         topLabel.frame = CGRect(x:0, y: 0, width: 100, height: 20)
-        
-        
+
+
         // Play with redSquare's frame
 
-        
-        
+
+
         // Play with redSquare's transform
-        
-        
-        
+
+
+
         // Play with redSquare's bounds
-        
-        
-        
+
+
+
         // Play with containerView's color
-        
-        
-        
-        
+
+
+
+
         frameLabel.frame = CGRect(x: 0, y: frame.width, width: frame.width, height: 50)
         frameLabel.text = "  redSquare's Frame: \(redSquare.frame)"
         boundsLabel.frame = CGRect(x: 0, y: frame.width + 50, width: frame.width, height: 50)
         boundsLabel.text = "  redSquare's Bounds: \(redSquare.bounds)"
+    }
+    
+    override func draw(_ rect: CGRect) {
+        guard let context = UIGraphicsGetCurrentContext() else { return }
+        
+        context.translateBy(x: 0, y: frame.height * 0.7)
+        
+//        context.move(to: CGPoint(x: 0, y: 0))
+//        context.addLine(to: CGPoint(x: 200, y: 200))
+//        context.setLineWidth(5.0)
+//        context.setStrokeColor(UIColor.red.cgColor)
+//        context.strokePath()
     }
     
     
