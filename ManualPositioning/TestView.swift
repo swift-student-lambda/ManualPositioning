@@ -28,20 +28,21 @@ class TestView: UIView {
 
 
         // Play with redSquare's frame
-
+        //redSquare.frame = CGRect(origin: CGPoint(x: 50, y: 50), size: redSquareSize)
 
 
         // Play with redSquare's transform
-
-
+        redSquare.transform = .init(translationX: 50, y: 50)
+        redSquare.transform = redSquare.transform.rotated(by: .pi)
+        
+        //redSquare.transform = .identity
 
         // Play with redSquare's bounds
-
+        //redSquare.bounds = CGRect(x: 30, y: 0, width: 100, height: 100)
 
 
         // Play with containerView's color
-
-
+        
 
 
         frameLabel.frame = CGRect(x: 0, y: frame.width, width: frame.width, height: 50)
@@ -55,11 +56,18 @@ class TestView: UIView {
         
         context.translateBy(x: 0, y: frame.height * 0.7)
         
-//        context.move(to: CGPoint(x: 0, y: 0))
-//        context.addLine(to: CGPoint(x: 200, y: 200))
-//        context.setLineWidth(5.0)
+        context.move(to: CGPoint(x: 10, y: 0))
+        context.addLine(to: CGPoint(x: 10, y: 50))
+        context.addLine(to: CGPoint(x: 40, y: 75))
+        context.addLine(to: CGPoint(x: 70, y: 50))
+        context.addLine(to: CGPoint(x: 70, y: 0))
+        context.addLine(to: CGPoint(x: 10, y: 0))
+        
 //        context.setStrokeColor(UIColor.red.cgColor)
 //        context.strokePath()
+        
+        context.setFillColor(UIColor.red.cgColor)
+        context.fillPath()
     }
     
     
@@ -98,4 +106,3 @@ class TestView: UIView {
         boundsLabel.numberOfLines = 0
     }
 }
-
